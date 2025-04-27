@@ -9,15 +9,12 @@ class blocks_of_subtitle
 	friend class SAMI;
 	friend class SSA;
 
-//  private:
-//	int m_start;
-//	int m_end;
-//	std::string m_text;
-
-  public:
-    int m_start;
+  private:
+	int m_start;
 	int m_end;
 	std::string m_text;
+
+  public:
 	blocks_of_subtitle();
 	blocks_of_subtitle(int start, int end, std::string& text);
 };
@@ -42,11 +39,9 @@ class subtitle
 	template< typename T >
 	friend void parsing(std::ifstream& fileName, T& format);
 
-//  protected:
-//	Vector m_vector;
-
+  protected:
+	Vector m_vector;
   public:
-    Vector m_vector;
 	subtitle();
 	~subtitle();
 	void remove_styles();
